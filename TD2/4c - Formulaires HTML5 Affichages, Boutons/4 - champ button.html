@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Ma première page</title>
+    <meta charset="utf-8">
+
+    <script>
+        function btnBoutonClick() {
+            alert("Coucou");
+
+            
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Formulaire de base</h1>
+
+    <form action="https://knightof.net/fac/form_receiver.php?test=aaa" method="post">
+
+        <!-- 
+        Champ input de type image :
+        Les champs de type image sont des boutons qui permettent d’envoyer le formulaire au serveur.
+        Cliquer sur un champ de type image envoie une requête HTTP au serveur avec les données du formulaire
+        ainsi qu'avec les coordonnées du pointeur de la souris au moment du clic. Pour cela, deux valeurs sont
+        envoyées au serveur : les coordonnées horizontales (x) et verticales (y) du pointeur de la souris en 
+        fonction de l'attribut name.
+                
+        Dans l'exemple ci-dessous, les coordonnées du pointeur de la souris sont envoyées au serveur 
+        avec deux valeurs : valbtn_x et valbtn_y.
+        -->
+        <input type="image" src="res/valider.jpg" name="valbtn">
+
+        <!--
+        Champ input de type submit :
+        Les champs de type submit sont des boutons qui permettent d’envoyer le formulaire au serveur.
+        Lorsque l’utilisateur clique sur un champ de type submit, le navigateur envoie une requête HTTP
+        au serveur avec les données du formulaire.
+        -->
+        <input type="submit" value="Envoyer">
+
+        <!--
+        Champ input de type reset :
+        Les champs de type reset sont des boutons qui permettent de réinitialiser les champs de formulaire
+        à leur valeur par défaut. Lorsque l’utilisateur clique sur un champ de type reset, les champs de
+        formulaire sont vidés et remis à leur valeur initiale.
+        -->
+        <input type="reset" value="Réinitialiser">
+
+        <!--
+        Balise button :
+        La balise button permet de définir un bouton dans un formulaire. Contrairement aux champs de type
+        input, la balise button permet d’afficher du contenu HTML à l’intérieur du bouton. Cela permet de
+        personnaliser le texte ou le contenu du bouton.
+
+        ici l'attribut onclick permet de définir un script JavaScript qui sera exécuté lorsque l’utilisateur
+        cliquera sur le bouton. Dans notre cas, le script affiche une boîte de dialogue (alert) avec le message
+        "Coucou". Ensuite, le formulaire est envoyé au serveur (action par défaut des boutons inclus 
+        dans un formulaire ). 
+        -->
+        <button name="bouton" value="Valider" onclick="btnBoutonClick()">Valider</button>
+
+    </form>
+
+</body>
+
+</html>

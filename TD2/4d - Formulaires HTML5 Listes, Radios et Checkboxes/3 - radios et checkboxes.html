@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Ma première page</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Formulaire de base</h1>
+
+    <form action="https://knightof.net/fac/form_receiver.php?test=aaa" method="post">
+
+        <h3>Radios</h3>
+        <p>Cache radio, pour permettre une <strong>sélection unique</strong>.</p>
+
+        <label>
+            <input type="radio" name="q1" value="1">
+            double frite
+        </label>
+        <label>
+            <input type="radio" name="q1" value="2" checked>
+            sauce barbecue
+        </label>
+        
+
+
+        <h3>Checkboxes</h3>
+        <p>Cache à cocher, pour permettre une <strong>sélection multiple</strong>.</p>
+
+        <!--    
+        L'attribut name du champ de formulaire est suivi de crochets [] pour indiquer que plusieurs valeurs
+        peuvent être envoyées pour ce champ de formulaire.
+        -->
+        <label>
+            <input type="checkbox" name="q2[]" value="1" checked>
+            double frite
+        </label>
+        <label>
+            <input type="checkbox" name="q2[]" value="2">
+            sauce barbecue
+        </label>
+
+
+
+        <input type="submit" value="Envoyer">
+
+    </form>
+
+</body>
+
+</html>

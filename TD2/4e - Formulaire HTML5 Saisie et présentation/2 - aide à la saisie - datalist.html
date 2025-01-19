@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Ma première page</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Formulaire de base</h1>
+
+    <form action="https://knightof.net/fac/form_receiver.php?test=aaa" method="get">
+
+        <datalist id="bonbons">
+            <option value="1">croco haribo</option>
+            <option value="2">chamallow</option>
+            <option value="3">roudoudou</option>
+            <option value="4">carensac</option>
+            <option value="5">carambar</option>
+        </datalist>
+
+        <label> Bonbons : <br>
+            <input type="text" name="bonbons" list="bonbons">
+        </label>
+
+        <!--
+        La balise datalist permet de proposer une liste de valeurs à l'utilisateur 
+        lorsqu'il saisit des données dans un champ de formulaire.
+
+        L'attribut list de la balise input permet de lier le champ de formulaire à la 
+        liste de valeurs proposée par la balise datalist.
+        -->
+
+
+        <input type="submit" value="Envoyer">
+
+    </form>
+
+</body>
+
+</html>

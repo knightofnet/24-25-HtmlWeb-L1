@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Ma première page</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Formulaire de base</h1>
+    
+    <form action="https://knightof.net/fac/form_receiver.php?test=aaa" method="post">
+
+        <!--
+        Balise label : permet de définir un label pour un champ de formulaire
+         Ici la balise label englobe le champ de formulaire, ce qui permet de cliquer sur le label pour activer le champ de formulaire
+        -->
+        <label>
+            Adhérent
+            <input type="checkbox" name="statut">
+        </label>
+
+
+        <!--
+        Balise label avec attribut for : 
+         Attribut for : permet de lier le label à un champ de formulaire
+        -->
+        <label for="idstatut">
+            Adhérent
+        </label>
+        <input type="checkbox" name="statut" id="idstatut">
+
+    </form>
+
+</body>
+
+</html>

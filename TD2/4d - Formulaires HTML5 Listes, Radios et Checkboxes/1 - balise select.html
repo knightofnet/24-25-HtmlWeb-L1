@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Ma première page</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Formulaire de base</h1>
+
+    <form action="https://knightof.net/fac/form_receiver.php?test=aaa" method="get">
+
+        <h3>Selection unique </h3>
+
+        <label for="langue">Choisir une langue : </label>
+        <select name="langue" id="langue">
+            <option value="FR" selected>Français</option>
+            <option value="EN">Anglais</option>
+            <option value="GE">Allemand</option>
+            <option value="IT">Italien</option>
+            <option value="ES">Espagnol</option>
+        </select>
+
+        <!--
+        Le champ select permet de définir une liste déroulante dans un formulaire.
+        Les balises option permettent de définir les différentes options de la liste déroulante.
+        Seule l'option (ou les options) sélectionnée(s) sera(seront) envoyée(s) au serveur lors 
+        de l'envoi du formulaire. L'attribut value permet de définir la valeur de l'option qui sera envoyée au serveur.
+
+        L'attribut selected permet de définir l'option sélectionnée par défaut dans la liste déroulante.
+        
+        -->
+
+
+        <h3>Selection multiple </h3>
+
+        <label for="langueBis">
+            Choisir au moins une langue :
+        </label>
+        <select name="langueAutre[]" id="langueBis" multiple>
+            <option value="FR" selected>Français</option>
+            <option value="EN">Anglais</option>
+            <option value="GE">Allemand</option>
+            <option value="IT">Italien</option>
+            <option value="ES">Espagnol</option>
+        </select>
+
+        <!--
+        L'attribut multiple permet de définir que l'utilisateur peut sélectionner plusieurs options 
+        dans la liste déroulante. Pour sélectionner plusieurs options, il faut maintenir la touche
+        Ctrl (ou Cmd sur Mac) enfoncée tout en cliquant sur les options à sélectionner.
+
+        Le nom du champ de formulaire est suivi de crochets [] pour indiquer que plusieurs valeurs
+        peuvent être envoyées pour ce champ de formulaire.
+        -->
+
+
+        <input type="submit" value="Envoyer">
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Ma première page</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Formulaire de base</h1>
+
+    <form action="https://knightof.net/fac/form_receiver.php?test=aaa" method="post">
+
+        <input type="number" name="a" onchange="o.value=a.valueAsNumber + b.valueAsNumber">
+        +
+        <input type="number" name="b" onchange="o.value=a.valueAsNumber + b.valueAsNumber">
+        =
+        <output name="o"></output>
+
+        <!--
+        Explications :
+        Ce code HTML permet de réaliser une addition de deux nombres directement dans la page web, 
+        sans avoir besoin de recharger la page ni de cliquer sur un bouton « Calculer ». L’addition 
+        est effectuée automatiquement dès qu’une valeur est modifiée dans l’un des deux champs de saisie.
+
+        Les deux champs de saisie (input) sont des champs de formulaire destinés à la saisie de valeurs 
+        numériques. Le navigateur affichera généralement des flèches pour augmenter ou diminuer la valeur 
+        dans ces champs. Le type number permet de s’assurer que l’utilisateur ne puisse saisir que des 
+        valeurs numériques (le navigateur se chargera de faire respecter le format [ce n'est pas infaillible]).
+
+        L’attribut onchange permet de définir un script JavaScript qui sera exécuté dès que la valeur du
+        champ de formulaire change. Dans notre cas, le script est une simple addition des deux valeurs
+        saisies dans les champs a et b, et le résultat est affiché dans un champ de sortie (output).
+
+        La balise output est une balise HTML5 qui permet d’afficher un résultat calculé par un script
+        JavaScript. Elle est liée aux champs de formulaire par leur attribut name. Dans notre cas, le
+        champ de sortie o est lié aux champs de saisie a et b par leur attribut name. Le script JavaScript
+        se charge de mettre à jour le contenu de la balise output avec le résultat de l’addition des deux
+        valeurs saisies dans les champs a et b.
+
+        Il est important de noter que le script JavaScript est exécuté côté client, c’est-à-dire dans le
+        navigateur de l’utilisateur. Cela signifie que le résultat de l’addition n’est pas envoyé au serveur
+        (il n’y a pas de requête HTTP supplémentaire). Le calcul est effectué en temps réel dans le navigateur
+        de l’utilisateur, sans interaction avec le serveur.
+
+        L'utilisation de valueAsNumber permet de récupérer la valeur du champ de formulaire sous forme de
+        nombre (et non de chaîne de caractères). Cela permet de réaliser l’addition correctement, sans
+        concaténation de chaînes de caractères.
+        -->
+
+    </form>
+
+</body>
+
+</html>

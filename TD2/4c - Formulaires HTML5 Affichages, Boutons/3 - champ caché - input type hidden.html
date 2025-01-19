@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Ma première page</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Formulaire de base</h1>
+
+    <form action="https://knightof.net/fac/form_receiver.php?test=aaa" method="post">
+
+        <input type="hidden"
+        name="MAX_FILE_SIZE"
+        value="2000000">
+
+        <!-- 
+        Le champ de type hidden est un champ de formulaire invisible. Il permet de transmettre des données
+        supplémentaires au serveur sans que l’utilisateur ait besoin de les saisir. Ces données sont envoyées
+        avec le reste du formulaire lors de l’envoi des données au serveur.
+        -->
+
+        <input type="submit" value="Envoyer">
+
+    </form>
+
+</body>
+
+</html>

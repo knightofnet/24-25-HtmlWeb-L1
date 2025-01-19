@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Ma première page</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Formulaire de base</h1>
+
+    <form action="https://knightof.net/fac/form_receiver.php?test=aaa" method="get">
+
+        <label for="passwd"> Mot de passe : </label>
+        <input type="password" id="passwd" name="passwd" pattern="[a-zA-Z0-9]{8}" title="8 caractères, lettres ou chiffres">
+
+        <label> Fichier : <br>
+            <input type="file" name="fichier">
+        </label>
+
+        <label for="bloctxt"> Commentaires : <br> </label>
+        <textarea cols="40" placeholder="Laissez-nous un commentaire..." rows="5" maxlength="300" name="comments"
+            id="bloctxt">
+        </textarea>
+
+
+        <input type="submit" value="Envoyer">
+
+    </form>
+
+</body>
+
+</html>

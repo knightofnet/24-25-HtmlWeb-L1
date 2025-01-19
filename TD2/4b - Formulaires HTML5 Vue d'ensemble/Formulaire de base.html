@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Ma première page</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Formulaire de base</h1>
+
+    <p>Voici un premier formulaire.</p>
+    <p>Regardez les commentaires HTML pour plus de détails</p>
+
+    <!-- 
+    Balise form : permet de définir un formulaire
+     Attribut action : permet de définir l'URL de la page qui va traiter les données du formulaire
+     Attribut method : permet de définir la méthode HTTP à utiliser pour envoyer les données du formulaire    
+    -->
+    <form action="https://knightof.net/fac/form_receiver.php?test=aaa" method="post">
+
+        <!--
+        Balise label : permet de définir un label pour un champ de formulaire
+         Attribut for : permet de lier le label à un champ de formulaire
+        -->
+        <label for="nom">Nom :</label>
+        <!--
+        Balise input : permet de définir un champ de formulaire
+         Attribut type : permet de définir le type de champ de formulaire. Ici, c'est un champ de texte (text)
+         Attribut id : permet de définir un identifiant unique pour le champ de formulaire
+         Attribut name : permet de définir le nom du champ de formulaire
+         Attribut required : permet de définir que le champ de formulaire est obligatoire
+         Attribut placeholder : permet de définir un texte d'aide pour le champ de formulaire
+         Attribut minlength : permet de définir le nombre minimum de caractères pour le champ de formulaire
+         Attribut maxlength : permet de définir le nombre maximum de caractères pour le champ de formulaire
+         Attribut title : permet de définir un texte d'aide pour le champ de formulaire
+        -->
+        <input type="text" id="nom" name="nom" required placeholder="Entrez votre nom" minlength="10" maxlength="20"
+            title="Le nom doit contenir entre 10 et 20 caractères">
+
+        <br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom">
+
+        <br>
+
+        <label for="email">Email :</label>
+        <!--
+        Depuis HTML5, il est possible d'utiliser le type email pour les champs de formulaire
+         Cela permet de vérifier que l'adresse email est bien au format email
+        -->
+        <input type="email" id="email" name="email" required placeholder="Entrez votre email">
+
+        <br>
+        <label for="mdp">Mot de passe :</label>
+        <!--
+        Le type password permet de masquer les caractères saisis dans le champ de formulaire. 
+        Utile pour les mots de passe
+        -->
+        <input type="password" id="mdp" name="mdp" required placeholder="Entrez votre mot de passe">
+
+        <br>
+
+        <label for="date">Date de naissance :</label>
+        <!--
+        Depuis HTML5, il est possible d'utiliser le type date pour les champs de formulaire
+         Cela permet d'afficher un calendrier pour sélectionner une date
+        -->
+        <input type="date" id="date" name="date" required>
+
+        <br>
+
+        <!--
+        La balise fieldset permet de regrouper des champs de formulaire
+         La balise legend permet de définir un titre pour le groupe de champs de formulaire
+         Visuellement, cela permet de mieux structurer le formulaire et de le rendre plus lisible.
+        -->
+        <fieldset>
+            <legend>Sexe :</legend>
+
+            <!--
+            Le type radio permet de créer des boutons radio
+             Les boutons radio permettent de sélectionner une seule option parmi plusieurs
+             Pour cela, les boutons radio doivent avoir le même attribut name.
+             Ici, les boutons radio ont le même attribut name (sexe)
+             Pour chaque bouton radio, il faut définir une valeur différente pour l'attribut value (ici homme ou femme)
+             Le serveur récupérera la valeur du bouton radio sélectionné par l'utilisateur : soit homme, soit femme
+            -->
+            <input type="radio" id="sexe_h" name="sexe" value="homme" required><label for="sexe_h">Homme</label>
+            <input type="radio" id="sexe_f" name="sexe" value="femme" required><label for="sexe_f">Femme</label>
+
+        </fieldset>
+
+        <br>
+
+        <label for="pays">Pays :</label>
+        <!--
+        La balise select permet de créer une liste déroulante
+         La balise option permet de définir les options de la liste déroulante
+         L'attribut value permet de définir la valeur de l'option
+         L'attribut selected permet de définir l'option sélectionnée par défaut
+        -->
+        <select id="pays" name="pays" required>
+            <option value="">Choisissez un pays</option>
+            <option value="france">France</option>
+            <option value="espagne">Espagne</option>
+            <option value="italie">Italie</option>
+            <option value="royaume-uni">Royaume-Uni</option>
+        </select>
+
+        <br>
+
+        <label for="message">Message :</label>
+        <!--
+        La balise textarea permet de créer une zone de texte multiligne
+         L'attribut rows permet de définir le nombre de lignes de la zone de texte
+         L'attribut cols permet de définir le nombre de colonnes de la zone de texte
+        -->
+        <textarea id="message" rows="2" cols="50" name="message" required></textarea>
+
+        <br>
+
+        <!--
+        Le type submit permet de créer un bouton de soumission du formulaire
+         Lorsque l'utilisateur clique sur ce bouton, les données du formulaire sont envoyées au serveur
+         (au fichier défini dans l'attribut action de la balise form, par la méthode définie dans l'attribut method de la balise form)
+        -->
+        <input type="submit" value="Envoyer">
+
+
+    </form>
+    <!-- 
+    Fin du formulaire. 
+     Tous les champs à l'intérieur de la balise form seront envoyés au serveur lors de la soumission du formulaire 
+    -->
+</body>
+
+</html>
